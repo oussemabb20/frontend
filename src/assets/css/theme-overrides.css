@@ -1,0 +1,507 @@
+/**
+ * THEME OVERRIDES
+ * 
+ * This file provides utility classes and overrides to ensure consistent
+ * layout across light and dark themes. All border widths, padding, margins,
+ * and font sizes are standardized here.
+ */
+
+/* ============================================
+   BORDER UTILITIES - CONSISTENT WIDTH
+   ============================================ */
+
+.border-standard {
+  border: 1px solid var(--border-primary) !important;
+}
+
+.border-secondary {
+  border: 1px solid var(--border-secondary) !important;
+}
+
+.border-focus {
+  border: 1px solid var(--border-focus) !important;
+}
+
+.border-transparent {
+  border: 1px solid transparent !important;
+}
+
+/* Ensure all theme-dependent borders maintain consistent width */
+[data-theme="dark"] *[style*="border"],
+[data-theme="light"] *[style*="border"] {
+  /* This ensures inline styles don't override border width */
+}
+
+/* ============================================
+   CARD COMPONENTS
+   ============================================ */
+
+.MuiCard-root,
+.card-surface {
+  border: 1px solid var(--card-border) !important;
+  background: var(--gradient-card) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* ============================================
+   INPUT COMPONENTS
+   ============================================ */
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline,
+.MuiInput-underline:before {
+  border-width: 1px !important;
+  border-color: var(--input-border) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.MuiInput-underline:hover:before {
+  border-width: 1px !important;
+  border-color: var(--input-border-hover) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+.MuiInput-underline.Mui-focused:after {
+  border-width: 2px !important;
+  border-color: var(--input-border-focus) !important;
+}
+
+.MuiInputBase-root {
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+}
+
+/* ============================================
+   SELECT/DROPDOWN COMPONENTS
+   ============================================ */
+
+.MuiSelect-select {
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border: 1px solid var(--input-border) !important;
+}
+
+.MuiSelect-icon {
+  color: var(--text-secondary) !important;
+}
+
+.MuiMenu-paper,
+.MuiPopover-paper {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-secondary) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.MuiMenuItem-root {
+  color: var(--text-primary) !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background-color: var(--color-primary) !important;
+  color: var(--text-inverse) !important;
+}
+
+/* ============================================
+   TABLE COMPONENTS
+   ============================================ */
+
+.MuiTableContainer-root {
+  border: 1px solid var(--border-primary) !important;
+  background: var(--bg-surface) !important;
+}
+
+.MuiTableCell-root {
+  border-color: var(--border-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================
+   BUTTON COMPONENTS
+   ============================================ */
+
+.MuiButton-root {
+  /* Ensure consistent padding and sizing */
+  padding: 10px 20px !important;
+  font-size: var(--font-size-base) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  border-width: 1px !important;
+}
+
+.MuiButton-outlined {
+  border: 1px solid var(--border-primary) !important;
+}
+
+.MuiButton-contained {
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.MuiButton-contained:hover {
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* ============================================
+   DIVIDER COMPONENTS
+   ============================================ */
+
+.MuiDivider-root,
+hr {
+  border-color: var(--divider-color) !important;
+  border-width: 1px !important;
+}
+
+/* ============================================
+   CHIP/BADGE COMPONENTS
+   ============================================ */
+
+.MuiChip-root {
+  border: 1px solid var(--border-primary) !important;
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb) !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover) !important;
+}
+
+/* ============================================
+   FOCUS STATES - CONSISTENT ACROSS THEMES
+   ============================================ */
+
+*:focus-visible {
+  outline: 2px solid var(--border-focus) !important;
+  outline-offset: 2px !important;
+  box-shadow: var(--shadow-focus) !important;
+}
+
+/* ============================================
+   TYPOGRAPHY - ENSURE CONSISTENT SIZING
+   ============================================ */
+
+h1, .MuiTypography-h1 {
+  font-size: var(--font-size-4xl) !important;
+  font-weight: var(--font-weight-bold) !important;
+  line-height: var(--line-height-tight) !important;
+  color: var(--text-primary) !important;
+}
+
+h2, .MuiTypography-h2 {
+  font-size: var(--font-size-3xl) !important;
+  font-weight: var(--font-weight-bold) !important;
+  line-height: var(--line-height-tight) !important;
+  color: var(--text-primary) !important;
+}
+
+h3, .MuiTypography-h3 {
+  font-size: var(--font-size-2xl) !important;
+  font-weight: var(--font-weight-bold) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--text-primary) !important;
+}
+
+h4, .MuiTypography-h4 {
+  font-size: var(--font-size-xl) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--text-primary) !important;
+}
+
+h5, .MuiTypography-h5 {
+  font-size: var(--font-size-lg) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--text-primary) !important;
+}
+
+h6, .MuiTypography-h6 {
+  font-size: var(--font-size-base) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--text-primary) !important;
+}
+
+p, .MuiTypography-body1 {
+  font-size: var(--font-size-base) !important;
+  font-weight: var(--font-weight-normal) !important;
+  line-height: var(--line-height-relaxed) !important;
+  color: var(--text-primary) !important;
+}
+
+.MuiTypography-body2 {
+  font-size: var(--font-size-sm) !important;
+  font-weight: var(--font-weight-normal) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--text-secondary) !important;
+}
+
+.MuiTypography-caption {
+  font-size: var(--font-size-xs) !important;
+  font-weight: var(--font-weight-normal) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--text-tertiary) !important;
+}
+
+/* ============================================
+   TRANSITIONS - SMOOTH THEME SWITCHING
+   ============================================ */
+
+* {
+  transition: 
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base) !important;
+}
+
+/* Exclude animations and transforms from theme transitions */
+*:not([class*="animate"]):not([class*="transition"]) {
+  transition-property: background-color, color, border-color, box-shadow !important;
+}
+
+/* ============================================
+   BACKDROP/MODAL COMPONENTS
+   ============================================ */
+
+.MuiBackdrop-root {
+  background-color: var(--backdrop-color) !important;
+}
+
+.MuiDialog-paper,
+.MuiModal-paper {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-secondary) !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+
+/* ============================================
+   NAVBAR/APPBAR COMPONENTS
+   ============================================ */
+
+.MuiAppBar-root {
+  background: var(--gradient-navbar) !important;
+  border-bottom: 1px solid var(--navbar-border) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* ============================================
+   DRAWER/SIDENAV COMPONENTS
+   ============================================ */
+
+.MuiDrawer-paper {
+  background: var(--gradient-sidenav) !important;
+  border-right: 1px solid var(--border-secondary) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* ============================================
+   LIST ITEMS
+   ============================================ */
+
+.MuiListItem-root,
+.MuiListItemButton-root {
+  color: var(--text-primary) !important;
+  /* Ensure consistent padding */
+  padding: 10px 16px !important;
+}
+
+.MuiListItemButton-root:hover {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.MuiListItemButton-root.Mui-selected {
+  background: var(--gradient-primary) !important;
+  color: var(--text-inverse) !important;
+  font-weight: var(--font-weight-semibold) !important;
+}
+
+.MuiListItemIcon-root {
+  color: var(--color-primary) !important;
+  min-width: 40px !important;
+}
+
+/* ============================================
+   FORM LABELS
+   ============================================ */
+
+.MuiFormLabel-root {
+  color: var(--text-secondary) !important;
+  font-size: var(--font-size-sm) !important;
+  font-weight: var(--font-weight-medium) !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: var(--color-info) !important;
+}
+
+.MuiFormLabel-root.Mui-error {
+  color: var(--color-error) !important;
+}
+
+.MuiFormHelperText-root {
+  color: var(--text-tertiary) !important;
+  font-size: var(--font-size-xs) !important;
+}
+
+.MuiFormHelperText-root.Mui-error {
+  color: var(--color-error) !important;
+}
+
+/* ============================================
+   SWITCH/CHECKBOX/RADIO COMPONENTS
+   ============================================ */
+
+.MuiSwitch-track {
+  background-color: var(--border-primary) !important;
+  border: 1px solid var(--border-secondary) !important;
+}
+
+.MuiSwitch-thumb {
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.MuiCheckbox-root,
+.MuiRadio-root {
+  color: var(--text-secondary) !important;
+}
+
+.MuiCheckbox-root.Mui-checked,
+.MuiRadio-root.Mui-checked {
+  color: var(--color-primary) !important;
+}
+
+/* ============================================
+   TOOLTIP COMPONENTS
+   ============================================ */
+
+.MuiTooltip-tooltip {
+  background-color: var(--bg-overlay) !important;
+  color: var(--text-primary) !important;
+  font-size: var(--font-size-xs) !important;
+  padding: 6px 12px !important;
+  border: 1px solid var(--border-secondary) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* ============================================
+   PROGRESS/LOADING COMPONENTS
+   ============================================ */
+
+.MuiLinearProgress-root {
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-secondary) !important;
+}
+
+.MuiLinearProgress-bar {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiCircularProgress-root {
+  color: var(--color-primary) !important;
+}
+
+/* ============================================
+   STEPPER COMPONENTS
+   ============================================ */
+
+.MuiStep-root {
+  color: var(--text-tertiary) !important;
+}
+
+.MuiStep-root.Mui-active {
+  color: var(--color-info) !important;
+}
+
+.MuiStep-root.Mui-completed {
+  color: var(--color-success) !important;
+}
+
+.MuiStepConnector-line {
+  border-color: var(--border-primary) !important;
+  border-width: 1px !important;
+}
+
+/* ============================================
+   ALERT/NOTIFICATION COMPONENTS
+   ============================================ */
+
+.MuiAlert-root {
+  border: 1px solid var(--border-primary) !important;
+  background-color: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+}
+
+.MuiAlert-standardInfo {
+  border-color: var(--color-info) !important;
+  background-color: var(--bg-surface) !important;
+}
+
+.MuiAlert-standardSuccess {
+  border-color: var(--color-success) !important;
+  background-color: var(--bg-surface) !important;
+}
+
+.MuiAlert-standardWarning {
+  border-color: var(--color-warning) !important;
+  background-color: var(--bg-surface) !important;
+}
+
+.MuiAlert-standardError {
+  border-color: var(--color-error) !important;
+  background-color: var(--bg-surface) !important;
+}
+
+/* ============================================
+   LINK COMPONENTS
+   ============================================ */
+
+a {
+  color: var(--color-info) !important;
+  text-decoration: underline !important;
+}
+
+a:hover {
+  color: var(--color-info-hover) !important;
+}
+
+/* ============================================
+   PREVENT LAYOUT SHIFT ON THEME CHANGE
+   ============================================ */
+
+/* Ensure all elements maintain their dimensions during theme transitions */
+* {
+  box-sizing: border-box !important;
+}
+
+/* Prevent content reflow */
+body,
+html {
+  overflow-x: hidden !important;
+}
+
+/* Ensure images don't cause layout shifts */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}

@@ -1,0 +1,589 @@
+/* Accessibility Improvements */
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0075FF;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 10000;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Improved focus indicators */
+*:focus-visible {
+  outline: 2px solid #0075FF;
+  outline-offset: 2px;
+}
+
+/* High contrast focus for dark backgrounds */
+[data-theme="dark"] *:focus-visible {
+  outline-color: #00C6FF;
+}
+
+/* Remove default focus outline but keep for keyboard users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Ensure sufficient color contrast for text */
+.text-contrast-high {
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyboard navigation indicators */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #0075FF;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 117, 255, 0.2);
+}
+
+/* Ensure interactive elements are large enough (44x44px minimum) */
+button,
+a,
+input[type="button"],
+input[type="submit"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improve link visibility */
+a {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark Mode Enhancements */
+[data-theme="dark"] {
+  --bg-primary: #0a0e23;
+  --bg-secondary: #141829;
+  --bg-tertiary: #1e293b;
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --border-color: rgba(148, 163, 184, 0.25);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8fafb;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f7fafc;
+  --text-primary: #1a202c;
+  --text-secondary: #475569;
+  --border-color: rgba(203, 213, 225, 0.5);
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --primary-color: #0ea5e9;
+  --primary-light: #2563eb;
+  --info-color: #0075ff;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+/* Dark mode text improvements */
+[data-theme="dark"] body {
+  background-color: #0a0e23;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .MuiPaper-root {
+  background-color: #141829;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .MuiCard-root {
+  background-color: #141829;
+  color: #e2e8f0;
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+[data-theme="dark"] .MuiInput-root,
+[data-theme="dark"] .MuiOutlinedInput-root,
+[data-theme="dark"] .MuiFilledInput-root {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .MuiInput-underline:before,
+[data-theme="dark"] .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+[data-theme="dark"] button:not(.MuiIconButton-root) {
+  background-color: rgba(67, 24, 255, 0.2);
+  color: #e2e8f0;
+  border-color: rgba(67, 24, 255, 0.4);
+}
+
+[data-theme="dark"] button:not(.MuiIconButton-root):hover {
+  background-color: rgba(67, 24, 255, 0.3);
+  border-color: rgba(67, 24, 255, 0.6);
+}
+
+[data-theme="dark"] a {
+  color: #0075ff;
+}
+
+[data-theme="dark"] a:hover {
+  color: #21d4fd;
+}
+
+/* Light mode text improvements */
+[data-theme="light"] body {
+  background-color: #ffffff;
+  color: #1a202c;
+}
+
+[data-theme="light"] .MuiInput-root,
+[data-theme="light"] .MuiOutlinedInput-root,
+[data-theme="light"] .MuiFilledInput-root {
+  background-color: #ffffff;
+  color: #1a202c;
+}
+
+[data-theme="light"] .MuiInput-underline:before,
+[data-theme="light"] .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(203, 213, 225, 0.5);
+}
+
+[data-theme="light"] .MuiInput-underline:hover:before,
+[data-theme="light"] .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(203, 213, 225, 0.7);
+}
+
+[data-theme="light"] .MuiInput-underline.Mui-focused:after,
+[data-theme="light"] .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #0075ff;
+  border-width: 2px;
+}
+
+[data-theme="light"] button:not(.MuiIconButton-root) {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.28);
+  font-weight: 600;
+  text-transform: none;
+}
+
+[data-theme="light"] button:not(.MuiIconButton-root):hover {
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-theme="light"] button:not(.MuiIconButton-root):active {
+  transform: translateY(0);
+}
+
+[data-theme="light"] a {
+  color: #0075ff;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+[data-theme="light"] a:hover {
+  color: #0050cc;
+  text-decoration-thickness: 2px;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+[data-theme="light"] .MuiAppBar-root {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.97) 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.4);
+}
+
+[data-theme="light"] .MuiDrawer-paper {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(248, 250, 252, 0.98) 100%);
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(203, 213, 225, 0.4);
+}
+
+[data-theme="light"] .MuiListItemButton:hover {
+  background-color: rgba(14, 165, 233, 0.08);
+}
+
+[data-theme="light"] .MuiListItemButton.Mui-selected {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.16) 0%, rgba(37, 99, 235, 0.12) 100%);
+  color: #2563eb;
+  font-weight: 600;
+}
+
+[data-theme="light"] .MuiChip-root {
+  background-color: rgba(14, 165, 233, 0.12);
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.28);
+}
+
+[data-theme="light"] .MuiProgressBar-determinate {
+  background-color: rgba(203, 213, 225, 0.4);
+}
+
+[data-theme="light"] .MuiStep-root {
+  color: #94a3b8;
+}
+
+[data-theme="light"] .MuiStep-root.Mui-active {
+  color: #0075ff;
+}
+
+[data-theme="light"] .MuiStep-root.Mui-completed {
+  color: #10b981;
+}
+
+/* High contrast mode support */
+
+/* Scrollbar styling for light mode */
+[data-theme="light"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Scrollbar styling for dark mode */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Light mode focus states */
+[data-theme="light"] button:focus-visible,
+[data-theme="light"] a:focus-visible,
+[data-theme="light"] input:focus-visible {
+  outline: 2px solid #4318ff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(67, 24, 255, 0.15);
+}
+
+/* Light mode badge styling */
+[data-theme="light"] .MuiBadge-badge {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Light mode tooltip styling */
+[data-theme="light"] .MuiTooltip-tooltip {
+  background-color: rgba(26, 32, 44, 0.9);
+  color: #ffffff;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* Light mode modal backdrop */
+[data-theme="light"] .MuiBackdrop-root {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Light mode table styling */
+[data-theme="light"] .MuiTableCell-root {
+  border-color: rgba(203, 213, 225, 0.4);
+  color: #1a202c;
+}
+
+[data-theme="light"] .MuiTableHead-root {
+  background-color: #f8fafc;
+}
+
+[data-theme="light"] .MuiTableBody-root > .MuiTableRow-root:hover {
+  background-color: rgba(67, 24, 255, 0.03);
+}
+
+/* Light mode select/dropdown styling */
+[data-theme="light"] .MuiSelect-select,
+[data-theme="light"] .MuiNativeSelect-select {
+  color: #1a202c;
+}
+
+[data-theme="light"] .MuiPopover-paper {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode switch styling */
+[data-theme="light"] .MuiSwitch-track {
+  background-color: rgba(203, 213, 225, 0.5);
+}
+
+[data-theme="light"] .MuiSwitch-thumb {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode slider styling */
+[data-theme="light"] .MuiSlider-track {
+  border: none;
+}
+
+[data-theme="light"] .MuiSlider-valueLabelLabel {
+  color: #ffffff;
+}
+
+/* Light mode divider */
+[data-theme="light"] .MuiDivider-root {
+  border-color: rgba(203, 213, 225, 0.4);
+}
+
+/* Light mode radio and checkbox */
+[data-theme="light"] .MuiRadio-root,
+[data-theme="light"] .MuiCheckbox-root {
+  color: #94a3b8;
+}
+
+[data-theme="light"] .MuiRadio-root.Mui-checked,
+[data-theme="light"] .MuiCheckbox-root.Mui-checked {
+  color: #4318ff;
+}
+
+/* Light mode text field label */
+[data-theme="light"] .MuiFormLabel-root {
+  color: #475569;
+}
+
+[data-theme="light"] .MuiFormLabel-root.Mui-focused {
+  color: #0075ff;
+}
+
+[data-theme="light"] .MuiFormLabel-root.Mui-error {
+  color: #dc2626;
+}
+
+/* Light mode helper text */
+[data-theme="light"] .MuiFormHelperText-root {
+  color: #64748b;
+}
+
+[data-theme="light"] .MuiFormHelperText-root.Mui-error {
+  color: #dc2626;
+}
+
+/* Light mode transitions */
+[data-theme="light"] * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+@media (prefers-contrast: high) {
+  * {
+    border-color: currentColor !important;
+  }
+  
+  button,
+  a {
+    outline: 2px solid currentColor;
+  }
+}
+
+/* Ensure form labels are visible */
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Error messages should be clearly visible */
+[role="alert"],
+.error-message {
+  padding: 12px 16px;
+  border-left: 4px solid #FF0000;
+  background: rgba(255, 0, 0, 0.1);
+  color: #FFB3B3;
+  font-weight: 500;
+}
+
+/* Success messages */
+[role="status"].success {
+  padding: 12px 16px;
+  border-left: 4px solid #00FF00;
+  background: rgba(0, 255, 0, 0.1);
+  color: #B3FFB3;
+  font-weight: 500;
+}
+
+/* Loading states should be announced */
+[aria-busy="true"] {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+/* Disabled states should be clear */
+[aria-disabled="true"],
+:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Light mode overrides for hardcoded dark template styles */
+body[data-theme="light"],
+html[data-theme="light"] body {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+body[data-theme="light"] .MuiDrawer-paper {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f7fafc 100%);
+  border-right: 1px solid rgba(203, 213, 225, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+body[data-theme="light"] .MuiAppBar-root {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.97) 100%);
+  color: #1a202c;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+body[data-theme="light"] .MuiButton-root {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+body[data-theme="light"] .MuiListItem-root {
+  color: #1a202c;
+}
+
+body[data-theme="light"] .MuiListItemIcon-root {
+  color: #4318ff;
+  min-width: 40px;
+}
+
+/* Light mode sidebar menu items */
+[data-theme="light"] .MuiList-root li {
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] [class*="VuiBox"]:has(> [class*="ListItemIcon"]) {
+  padding: 10.8px 12.8px 10.8px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Inactive menu items in light mode */
+[data-theme="light"] [class*="VuiBox"]:has(> [class*="ListItemIcon"]) {
+  background-color: transparent;
+  color: #1a202c;
+}
+
+[data-theme="light"] [class*="VuiBox"]:has(> [class*="ListItemIcon"]):hover {
+  background-color: rgba(67, 24, 255, 0.08);
+  color: #4318ff;
+}
+
+/* Active menu items in light mode */
+[data-theme="light"] [class*="VuiBox"][style*="background"]:has(> [class*="ListItemIcon"]) {
+  background: linear-gradient(135deg, rgba(67, 24, 255, 0.15) 0%, rgba(124, 58, 237, 0.1) 100%);
+  border: 1px solid rgba(67, 24, 255, 0.3);
+  color: #4318ff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(67, 24, 255, 0.15);
+}
+
+/* Light mode section titles */
+[data-theme="light"] .Typography-root:not([class*="ListItemText"]) {
+  color: #1a202c;
+}
+
+[data-theme="light"] [class*="Typography"][class*="overline"],
+[data-theme="light"] .MuiTypography-overline {
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Light mode account section */
+[data-theme="light"] .ACCOUNT {
+  border-top: 1px solid rgba(203, 213, 225, 0.3);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+/* Light mode profile link styling */
+[data-theme="light"] a {
+  color: #0075ff;
+}
+
+[data-theme="light"] a:hover {
+  color: #0050cc;
+}
+
+/* Sidebar brand/logo area light mode */
+[data-theme="light"] [class*="logo"] {
+  color: #1a202c;
+}

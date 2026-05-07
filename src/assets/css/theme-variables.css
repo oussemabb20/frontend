@@ -1,0 +1,207 @@
+/**
+ * GLOBAL THEME VARIABLES
+ * 
+ * This file defines ALL theme-related CSS variables for both light and dark modes.
+ * CRITICAL: Only colors, backgrounds, and shadows should differ between themes.
+ * Layout properties (padding, margin, border-width, font-size) MUST remain identical.
+ */
+
+:root,
+[data-theme="dark"] {
+  /* Background Colors */
+  --bg-primary: #0a0e23;
+  --bg-secondary: #141829;
+  --bg-tertiary: #1e293b;
+  --bg-surface: rgba(20, 24, 41, 0.80);
+  --bg-elevated: rgba(30, 41, 59, 0.60);
+  --bg-overlay: rgba(10, 14, 35, 0.94);
+  
+  /* Text Colors */
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --text-tertiary: #64748b;
+  --text-inverse: #0f172a;
+  
+  /* Border Colors */
+  --border-primary: rgba(148, 163, 184, 0.25);
+  --border-secondary: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(0, 117, 255, 0.38);
+  --border-error: rgba(239, 68, 68, 0.5);
+  --border-success: rgba(16, 185, 129, 0.5);
+  
+  /* Brand Colors */
+  --color-primary: #4318ff;
+  --color-primary-hover: #7c3aed;
+  --color-info: #0075ff;
+  --color-info-hover: #21d4fd;
+  --color-success: #01B574;
+  --color-success-hover: #35d996;
+  --color-warning: #ffb547;
+  --color-warning-hover: #ffcd75;
+  --color-error: #f53c2b;
+  --color-error-hover: #f85c52;
+  
+  /* Gradients */
+  --gradient-navbar: linear-gradient(123.64deg, rgba(20, 24, 41, 0.95) -22.38%, rgba(30, 41, 59, 0.90) 70.38%);
+  --gradient-sidenav: linear-gradient(127.09deg, rgba(10, 14, 35, 0.94) 19.41%, rgba(20, 24, 41, 0.49) 76.65%);
+  --gradient-card: linear-gradient(127.09deg, rgba(20, 24, 41, 0.80) 19.41%, rgba(30, 41, 59, 0.60) 76.65%);
+  --gradient-surface: linear-gradient(126.97deg, rgba(20, 24, 41, 0.80) 28.26%, rgba(30, 41, 59, 0.60) 91.2%);
+  --gradient-primary: linear-gradient(97.89deg, #4318ff, #7c3aed);
+  --gradient-info: linear-gradient(97.89deg, #0075ff, #21d4fd);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.6);
+  --shadow-focus: 0 0 0 4px rgba(0, 117, 255, 0.2);
+  
+  /* Input Colors */
+  --input-bg: #1e293b;
+  --input-border: rgba(148, 163, 184, 0.20);
+  --input-border-hover: rgba(148, 163, 184, 0.35);
+  --input-border-focus: rgba(0, 117, 255, 0.38);
+  --input-text: #e2e8f0;
+  --input-placeholder: #64748b;
+  
+  /* Component Specific */
+  --sidenav-button-bg: #1e293b;
+  --navbar-border: rgba(148, 163, 184, 0.15);
+  --card-border: rgba(148, 163, 184, 0.25);
+  --divider-color: rgba(255, 255, 255, 0.08);
+  --scrollbar-track: #0f172a;
+  --scrollbar-thumb: #334155;
+  --scrollbar-thumb-hover: #475569;
+  
+  /* Backdrop */
+  --backdrop-color: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="light"] {
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f7fafc;
+  --bg-surface: rgba(255, 255, 255, 0.99);
+  --bg-elevated: rgba(248, 250, 252, 0.98);
+  --bg-overlay: rgba(255, 255, 255, 0.99);
+  
+  /* Text Colors */
+  --text-primary: #1a202c;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-inverse: #ffffff;
+  
+  /* Border Colors */
+  --border-primary: rgba(203, 213, 225, 0.5);
+  --border-secondary: rgba(203, 213, 225, 0.35);
+  --border-focus: rgba(0, 117, 255, 0.5);
+  --border-error: rgba(220, 38, 38, 0.5);
+  --border-success: rgba(16, 185, 129, 0.5);
+  
+  /* Brand Colors (same as dark) */
+  --color-primary: #4318ff;
+  --color-primary-hover: #7c3aed;
+  --color-info: #0075ff;
+  --color-info-hover: #3b82f6;
+  --color-success: #10b981;
+  --color-success-hover: #34d399;
+  --color-warning: #f59e0b;
+  --color-warning-hover: #fbbf24;
+  --color-error: #ef4444;
+  --color-error-hover: #f87171;
+  
+  /* Gradients */
+  --gradient-navbar: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.97) 100%);
+  --gradient-sidenav: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(248, 250, 252, 0.98) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(248, 250, 252, 0.98) 100%);
+  --gradient-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(248, 250, 252, 0.97) 100%);
+  --gradient-primary: linear-gradient(135deg, #4318ff, #7c3aed);
+  --gradient-info: linear-gradient(135deg, #0075ff, #3b82f6);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.15), 0 6px 24px rgba(0, 0, 0, 0.1);
+  --shadow-focus: 0 0 0 4px rgba(67, 24, 255, 0.15);
+  
+  /* Input Colors */
+  --input-bg: #ffffff;
+  --input-border: rgba(203, 213, 225, 0.6);
+  --input-border-hover: rgba(203, 213, 225, 0.7);
+  --input-border-focus: rgba(0, 117, 255, 0.5);
+  --input-text: #1a202c;
+  --input-placeholder: #94a3b8;
+  
+  /* Component Specific */
+  --sidenav-button-bg: #e8ecf1;
+  --navbar-border: rgba(203, 213, 225, 0.35);
+  --card-border: rgba(203, 213, 225, 0.4);
+  --divider-color: rgba(203, 213, 225, 0.4);
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+  
+  /* Backdrop */
+  --backdrop-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 
+ * LAYOUT CONSTANTS (NEVER CHANGE BETWEEN THEMES)
+ * These values ensure consistent spacing and sizing across themes
+ */
+:root {
+  /* Border Widths - MUST BE IDENTICAL IN BOTH THEMES */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 3px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  
+  /* Typography - MUST BE IDENTICAL IN BOTH THEMES */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+  
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}

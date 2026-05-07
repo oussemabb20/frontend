@@ -1,0 +1,237 @@
+/**
+ * Semantic Theme Variables System
+ * All visual appearance changes are color-only
+ * Layout properties (padding, margin, border-width) remain identical across themes
+ */
+
+/* Light Theme (Default) */
+:root,
+[data-theme="light"] {
+  /* Primary Colors */
+  --color-primary: #4318ff;
+  --color-primary-hover: #7c3aed;
+  --color-secondary: #0075ff;
+  --color-secondary-hover: #00b4ff;
+  
+  /* Text Colors */
+  --color-text-primary: #1a202c;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #64748b;
+  --color-text-muted: #94a3b8;
+  
+  /* Background Colors */
+  --color-bg-primary: #f8fafb;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f7fafc;
+  --color-bg-surface: #f1f5f9;
+  
+  /* Border Colors */
+  --color-border-light: rgba(203, 213, 225, 0.5);
+  --color-border-medium: rgba(203, 213, 225, 0.7);
+  --color-border-strong: rgba(148, 163, 184, 0.3);
+  --color-border-navbar: rgba(203, 213, 225, 0.35);
+  
+  /* Input Colors */
+  --color-input-bg: #ffffff;
+  --color-input-border: rgba(203, 213, 225, 0.6);
+  --color-input-border-focus: #0075ff;
+  
+  /* Shadow Colors */
+  --color-shadow-sm: rgba(0, 0, 0, 0.05);
+  --color-shadow-md: rgba(0, 0, 0, 0.08);
+  --color-shadow-lg: rgba(0, 0, 0, 0.12);
+  
+  /* Component-specific Colors */
+  --color-sidenav-bg: rgba(255, 255, 255, 0.92);
+  --color-sidenav-border: rgba(203, 213, 225, 0.7);
+  --color-sidenav-button: #e8ecf1;
+  
+  --color-navbar-bg: rgba(255, 255, 255, 0.82);
+  --color-navbar-backdrop: saturate(200%) blur(24px);
+  
+  --color-card-bg: rgba(255, 255, 255, 0.98);
+  --color-card-overlay: rgba(241, 245, 249, 0.94);
+  
+  /* Gradient Backgrounds */
+  --gradient-navbar: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.97) 100%);
+  --gradient-sidenav: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(248, 250, 252, 0.98) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(248, 250, 252, 0.98) 100%);
+  --gradient-body: linear-gradient(135deg, #f7fafc 0%, #f1f5f9 25%, #e0e7ff 75%, #f0f4ff 100%);
+  
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #0075ff;
+  
+  /* Opacity */
+  --opacity-disabled: 0.65;
+  --opacity-hover: 0.9;
+  
+  /* Light mode form styling */
+  --form-field-bg: #ffffff;
+  --form-field-text: #1a202c;
+  --form-field-border: rgba(203, 213, 225, 0.5);
+  --form-field-border-hover: rgba(0, 117, 255, 0.3);
+  --form-divider: rgba(0, 0, 0, 0.1);
+  --form-button-secondary-bg: #f3f4f6;
+  --form-button-secondary-text: #1f2937;
+  --form-button-secondary-border: #e5e7eb;
+  --form-button-secondary-hover-bg: #e5e7eb;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Primary Colors */
+  --color-primary: #4318ff;
+  --color-primary-hover: #7c3aed;
+  --color-secondary: #00b4ff;
+  --color-secondary-hover: #21d4fd;
+  
+  /* Text Colors */
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #94a3b8;
+  --color-text-muted: #64748b;
+  
+  /* Background Colors */
+  --color-bg-primary: #0a0e23;
+  --color-bg-secondary: #141829;
+  --color-bg-tertiary: #1e293b;
+  --color-bg-surface: #334155;
+  
+  /* Border Colors */
+  --color-border-light: rgba(148, 163, 184, 0.15);
+  --color-border-medium: rgba(148, 163, 184, 0.25);
+  --color-border-strong: rgba(148, 163, 184, 0.35);
+  --color-border-navbar: rgba(148, 163, 184, 0.15);
+  
+  /* Input Colors */
+  --color-input-bg: #1e293b;
+  --color-input-border: rgba(148, 163, 184, 0.20);
+  --color-input-border-focus: #0075ff;
+  
+  /* Shadow Colors */
+  --color-shadow-sm: rgba(0, 0, 0, 0.3);
+  --color-shadow-md: rgba(0, 0, 0, 0.5);
+  --color-shadow-lg: rgba(0, 0, 0, 0.7);
+  
+  /* Component-specific Colors */
+  --color-sidenav-bg: rgba(20, 24, 41, 0.95);
+  --color-sidenav-border: rgba(148, 163, 184, 0.25);
+  --color-sidenav-button: #1e293b;
+  
+  --color-navbar-bg: rgba(20, 24, 41, 0.95);
+  --color-navbar-backdrop: none;
+  
+  --color-card-bg: rgba(20, 24, 41, 0.80);
+  --color-card-overlay: rgba(30, 41, 59, 0.60);
+  
+  /* Gradient Backgrounds */
+  --gradient-navbar: linear-gradient(123.64deg, rgba(20, 24, 41, 0.95) -22.38%, rgba(30, 41, 59, 0.90) 70.38%);
+  --gradient-sidenav: linear-gradient(127.09deg, rgba(10, 14, 35, 0.94) 19.41%, rgba(20, 24, 41, 0.49) 76.65%);
+  --gradient-card: linear-gradient(127.09deg, rgba(20, 24, 41, 0.80) 19.41%, rgba(30, 41, 59, 0.60) 76.65%);
+  --gradient-body: linear-gradient(135deg, #0a0e23 0%, #141829 50%, #1e293b 100%);
+  
+  /* Status Colors */
+  --color-success: #66d432;
+  --color-warning: #ffb547;
+  --color-error: #fd5c70;
+  --color-info: #00b4ff;
+  
+  /* Opacity */
+  --opacity-disabled: 0.65;
+  --opacity-hover: 0.9;
+}
+
+/* Layout-safe border widths (NEVER change between themes) */
+:root {
+  --border-width-0: 0;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-3: 3px;
+}
+
+/* Extended Component Colors - Light Theme */
+:root,
+[data-theme="light"] {
+  --color-admin-text: #1d4ed8;
+  --color-admin-bg: rgba(59, 130, 246, 0.12);
+  --color-admin-border: rgba(59, 130, 246, 0.36);
+  --color-admin-hover-bg: rgba(59, 130, 246, 0.18);
+  --color-admin-hover-border: rgba(37, 99, 235, 0.46);
+  
+  --color-user-text: #0f172a;
+  --color-user-bg: rgba(241, 245, 249, 0.95);
+  --color-user-border: rgba(148, 163, 184, 0.45);
+  --color-user-hover-bg: rgba(226, 232, 240, 0.95);
+  --color-user-hover-border: rgba(100, 116, 139, 0.55);
+}
+
+/* Extended Component Colors - Dark Theme */
+[data-theme="dark"] {
+  --color-admin-text: #7ec0ff;
+  --color-admin-bg: rgba(0, 117, 255, 0.18);
+  --color-admin-border: rgba(0, 117, 255, 0.45);
+  --color-admin-hover-bg: rgba(0, 117, 255, 0.24);
+  --color-admin-hover-border: rgba(0, 117, 255, 0.56);
+  
+  --color-user-text: rgba(236, 244, 255, 0.92);
+  --color-user-bg: rgba(9, 26, 68, 0.86);
+  --color-user-border: rgba(123, 155, 218, 0.34);
+  --color-user-hover-bg: rgba(15, 36, 86, 0.95);
+  --color-user-hover-border: rgba(164, 193, 246, 0.5);
+}
+
+/* Layout-safe padding/spacing (NEVER change between themes) */
+:root {
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-3xl: 3rem;
+  
+  --padding-button: 12px 24px;
+  --padding-input: 8px 12px;
+  --padding-card: 22px;
+  --padding-navbar: 1rem;
+  
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 15px;
+  --border-radius-2xl: 20px;
+  --border-radius-3xl: 24px;
+}
+
+/* Box Shadow (color-only, no layout impact) */
+:root {
+  --shadow-sm: 0 1px 2px var(--color-shadow-sm);
+  --shadow-md: 0 4px 12px var(--color-shadow-md);
+  --shadow-lg: 0 8px 24px var(--color-shadow-lg);
+  --shadow-xl: 0 12px 48px var(--color-shadow-lg);
+}
+
+/* Cover / Welcome / Card gradients and status colors */
+:root,
+[data-theme="light"] {
+  --gradient-cover: linear-gradient(127.09deg, rgba(255, 255, 255, 0.98) 19.41%, rgba(241, 245, 249, 0.95) 76.65%);
+  --welcome-bg: linear-gradient(127.09deg, rgba(255, 255, 255, 0.98) 19.41%, rgba(241, 245, 249, 0.95) 76.65%);
+  --card-content-bg: linear-gradient(127.09deg, rgba(248, 250, 252, 0.98) 19.41%, rgba(226, 232, 240, 0.95) 76.65%);
+  --status-banned-text: #b91c1c;
+  --status-active-text: #166534;
+  --status-banned-bg: #ffd7d7;
+  --status-active-bg: #d7ffe0;
+}
+
+[data-theme="dark"] {
+  --gradient-cover: linear-gradient(310deg, rgb(15, 18, 59) 14.25%, rgb(9, 13, 46) 56.45%, rgb(2, 5, 21) 86.14%);
+  --welcome-bg: linear-gradient(135deg, #0075FF 0%, #00C6FF 100%);
+  --card-content-bg: linear-gradient(126.97deg, rgba(20, 24, 41, 0.80) 28.26%, rgba(30, 41, 59, 0.60) 91.2%);
+  --status-banned-text: #ffd7d7;
+  --status-active-text: #d7ffe0;
+  --status-banned-bg: rgba(185, 28, 28, 0.12);
+  --status-active-bg: rgba(21, 128, 61, 0.12);
+}

@@ -1,0 +1,236 @@
+/* DateTimePicker Dark Theme Override */
+.MuiPickersPopper-root {
+  z-index: 1300 !important;
+}
+
+/* Hide calendar icon button in the input field */
+.MuiOutlinedInput-root .MuiIconButton-root[aria-label*="Choose date"] {
+  display: none !important;
+}
+
+.MuiPickersPopper-root .MuiPaper-root,
+.MuiPaper-root.MuiPickersPopper-paper {
+  background-color: #0a1929 !important;
+  background-image: none !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7) !important;
+  min-width: 320px !important;
+  max-width: 600px !important;
+  overflow: visible !important;
+}
+
+.MuiPickersPopper-root .MuiPickersLayout-root,
+.MuiPickersLayout-root {
+  background-color: transparent !important;
+  min-height: 400px !important;
+  overflow: visible !important;
+}
+
+.MuiPickersPopper-root .MuiPickersLayout-contentWrapper,
+.MuiPickersLayout-contentWrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: visible !important;
+}
+
+.MuiPickersPopper-root .MuiDateCalendar-root,
+.MuiDateCalendar-root {
+  width: 100% !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.MuiPickersPopper-root .MuiDayCalendar-root,
+.MuiDayCalendar-root {
+  overflow: visible !important;
+}
+
+.MuiPickersPopper-root .MuiPickersCalendarHeader-root,
+.MuiPickersCalendarHeader-root {
+  color: #e0e7ef !important;
+  padding-top: 0 !important;
+  margin-bottom: 16px !important;
+}
+
+.MuiPickersPopper-root .MuiPickersCalendarHeader-label,
+.MuiPickersCalendarHeader-label {
+  color: #e0e7ef !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.MuiPickersPopper-root .MuiPickersCalendarHeader-root .MuiIconButton-root,
+.MuiPickersCalendarHeader-root .MuiIconButton-root {
+  color: #6b8aa8 !important;
+  background-color: transparent !important;
+}
+
+.MuiPickersPopper-root .MuiPickersCalendarHeader-root .MuiIconButton-root:hover,
+.MuiPickersCalendarHeader-root .MuiIconButton-root:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.MuiPickersPopper-root .MuiDayCalendar-header .MuiTypography-root,
+.MuiDayCalendar-header .MuiTypography-root,
+.MuiDayCalendar-weekDayLabel {
+  color: #6b8aa8 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.MuiPickersPopper-root .MuiPickersDay-root,
+.MuiPickersDay-root {
+  color: #8fa8c4 !important;
+  background-color: transparent !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+}
+
+.MuiPickersPopper-root .MuiPickersDay-root:hover,
+.MuiPickersDay-root:hover:not(.Mui-disabled) {
+  background-color: rgba(33, 150, 243, 0.1) !important;
+}
+
+.MuiPickersPopper-root .MuiPickersDay-root.Mui-selected,
+.MuiPickersDay-root.Mui-selected {
+  background-color: #2196f3 !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+}
+
+.MuiPickersPopper-root .MuiPickersDay-root.Mui-selected:hover,
+.MuiPickersDay-root.Mui-selected:hover {
+  background-color: #1e88e5 !important;
+}
+
+.MuiPickersPopper-root .MuiPickersDay-root.MuiPickersDay-today,
+.MuiPickersDay-root.MuiPickersDay-today {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.MuiPickersPopper-root .MuiPickersDay-root.Mui-disabled,
+.MuiPickersDay-root.Mui-disabled {
+  color: #2d4a5f !important;
+}
+
+.MuiPickersPopper-root .MuiPickersDay-dayOutsideMonth,
+.MuiPickersDay-dayOutsideMonth {
+  color: #2d4a5f !important;
+}
+
+.MuiPickersPopper-root .MuiMultiSectionDigitalClock-root,
+.MuiMultiSectionDigitalClock-root {
+  background-color: #0f1f35 !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-top: 16px !important;
+  display: flex !important;
+  gap: 8px !important;
+}
+
+.MuiPickersPopper-root .MuiMultiSectionDigitalClockSection-root,
+.MuiMultiSectionDigitalClockSection-root {
+  flex: 1 !important;
+}
+
+.MuiPickersPopper-root .MuiMultiSectionDigitalClockSection-root .MuiList-root,
+.MuiMultiSectionDigitalClockSection-root .MuiList-root {
+  max-height: 200px !important;
+  overflow-y: auto !important;
+}
+
+.MuiPickersPopper-root .MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root,
+.MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root,
+.MuiMultiSectionDigitalClockSection-item {
+  color: #8fa8c4 !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  justify-content: center !important;
+  padding: 8px !important;
+  min-height: 40px !important;
+}
+
+.MuiPickersPopper-root .MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root:hover,
+.MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root:hover,
+.MuiMultiSectionDigitalClockSection-item:hover:not(.Mui-disabled) {
+  background-color: rgba(33, 150, 243, 0.1) !important;
+}
+
+.MuiPickersPopper-root .MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root.Mui-selected,
+.MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root.Mui-selected,
+.MuiMultiSectionDigitalClockSection-item.Mui-selected {
+  background-color: transparent !important;
+  color: #e0e7ef !important;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+}
+
+.MuiPickersPopper-root .MuiDialogActions-root,
+.MuiDialogActions-root.MuiPickersLayout-actionBar {
+  padding: 16px 0 0 !important;
+  justify-content: flex-end !important;
+  gap: 12px !important;
+}
+
+.MuiPickersPopper-root .MuiDialogActions-root .MuiButton-root,
+.MuiDialogActions-root.MuiPickersLayout-actionBar .MuiButton-root {
+  font-size: 14px !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  font-weight: 500 !important;
+  min-width: 80px !important;
+  background-color: #2196f3 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+.MuiPickersPopper-root .MuiDialogActions-root .MuiButton-root:hover,
+.MuiDialogActions-root.MuiPickersLayout-actionBar .MuiButton-root:hover {
+  background-color: #1e88e5 !important;
+}
+
+/* Scrollbar styling */
+.MuiPickersPopper-root .MuiList-root::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.MuiPickersPopper-root .MuiList-root::-webkit-scrollbar-track {
+  background: #0a1929 !important;
+}
+
+.MuiPickersPopper-root .MuiList-root::-webkit-scrollbar-thumb {
+  background: #2196f3 !important;
+  border-radius: 3px !important;
+}
+
+/* Ensure time values are visible on dark background */
+.MuiPickersPopper-root .MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root,
+.MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root,
+.MuiMultiSectionDigitalClockSection-item {
+  color: #e0e7ef !important;
+}
+
+.MuiPickersPopper-root .MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root.Mui-selected,
+.MuiMultiSectionDigitalClockSection-root .MuiMenuItem-root.Mui-selected,
+.MuiMultiSectionDigitalClockSection-item.Mui-selected {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Clock numbers for analog/time picker */
+.MuiPickersPopper-root .MuiClockNumber-root,
+.MuiClockNumber-root,
+.MuiPickersPopper-root .MuiPickersClockNumber-root,
+.MuiPickersClockNumber-root {
+  color: #e0e7ef !important;
+}
+
+.MuiPickersPopper-root .MuiClockNumber-root.Mui-selected,
+.MuiClockNumber-root.Mui-selected,
+.MuiPickersClockNumber-root.Mui-selected {
+  color: #ffffff !important;
+}
