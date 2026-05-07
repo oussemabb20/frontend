@@ -22,8 +22,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Box from "@mui/material/Box";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
 
 // MUI X Date Pickers components
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -33,7 +33,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "./styles/datepicker-theme.css";
 
 // Vision UI Dashboard React example components
-import Sidenav from "./examples/Sidenav/index.js";
+import Sidenav from "./examples/Sidenav/index.jsx";
 
 // Vision UI Dashboard React themes
 import theme from "./assets/theme/index.js";
@@ -57,25 +57,25 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 
 // Vision UI Dashboard React routes
-import routes from "./routes.js";
+import routes from "./routes.jsx";
 
 // Vision UI Dashboard React contexts
-import { useVisionUIController, setMiniSidenav, setDarkMode } from "./context/index.js";
+import { useVisionUIController, setMiniSidenav, setDarkMode } from "./context/index.jsx";
 
 // Protected Route Component
-import ProtectedRoute from "./components/ProtectedRoute/index.js";
+import ProtectedRoute from "./components/ProtectedRoute/index.tsx";
 
 // Admin Redirect Component
-import { AdminRedirect } from "./components/AdminRedirect.js";
+import { AdminRedirect } from "./components/AdminRedirect.tsx";
 
 // Redux
 import { useDispatch } from "react-redux";
-import { setUser } from "./store/slices/userSlice.js";
-import { authService } from "./services/auth.service.js";
+import { setUser } from "./store/slices/userSlice.ts";
+import { authService } from "./services/auth.service.ts";
 
 // Chat service for socket connection
-import chatService from "./services/chat.service.js";
-import tokenRefreshService from "./services/tokenRefresh.service.js";
+import chatService from "./services/chat.service.ts";
+import tokenRefreshService from "./services/tokenRefresh.service.ts";
 
 const lightPalette = {
   mode: "light",
@@ -779,7 +779,7 @@ export default function App() {
               },
             }}
           >
-            {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
+            {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
         </Tooltip>
       </Box>
